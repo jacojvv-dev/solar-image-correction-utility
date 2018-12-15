@@ -80,7 +80,7 @@ for file in get_files(args.directory):
 
      slope = get_line_slope(center_x, center_y, sunspot_center[0], sunspot_center[1])
      intercept = get_line_intercept(center_x, center_y, slope)
-     above = is_above(slope,intercept,scanable_result_search_center[0],scanable_result_search_center[1])
+     above = is_above(slope, intercept, scanable_result_search_center[0], scanable_result_search_center[1])
      above = not above if center_x > sunspot_center[0] else above
 
      rotate_by = (-1 if above else 1) * calculate_angle(pyth_a, pyth_b, pyth_c)
